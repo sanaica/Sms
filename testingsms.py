@@ -24,6 +24,9 @@ account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 messaging_service_sid = os.getenv('TWILIO_MESSAGING_SERVICE_SID')
 
+# ADD THIS LINE FOR DEBUGGING
+print(f"--- VERCEL DEBUG --- Account SID Used: '{account_sid}'")
+
 client = Client(account_sid, auth_token)
 
 def is_valid_phone_number(phone):
